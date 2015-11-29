@@ -1,0 +1,22 @@
+{
+  "name": "bms-mca-oauth-sdk",
+  "version": "2.0.0",
+  "description": "The bms-mca-oauth-sdk module can be used to get the authorization header from the Mobile Client Access Service",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "base64url": "0.0.6",
+    "jws": "~0.2.2",
+    "log4js": "^0.6.29",
+    "node-cache": "~1.0.0",
+    "q": "~1.0.1",
+    "request": "~2.42.0",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {},
+  "readmeFilename": "README.md"
+}
