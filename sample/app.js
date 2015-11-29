@@ -14,8 +14,8 @@
  *  limitations under the License.  
  */
 
-var express = require('express'),
-    imf = require('imf-oauth-user-sdk');
+var express = require('express');
+var oauthSDK = require('bms-mca-oauth-SDK');
 
 var app = express();
 
@@ -24,8 +24,8 @@ process.env.imfServiceUrl = 'http://imf-authserver.stage1.ng.bluemix.net/imf-aut
 app.get('/v2/apps/:appid/hello', 
 	function(req, res) {
 		
-		imf.getAuthorizationHeader({appId:req.params.appid}).then(function(token) {
-			res.send(200, token);
+		oauthSDK.getAuthorizationHeader({appId:req.params.appid}).then(function(authHeader) {
+			res.send(200, authHeader);
 		}, function(err) {
 			console.log(err);
 			res.send(400,err);
@@ -33,4 +33,5 @@ app.get('/v2/apps/:appid/hello',
 });
 
 app.listen(3000);
+
 console.log("app is listening at "+3000);
