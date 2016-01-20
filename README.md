@@ -46,11 +46,11 @@ var app = express();
 
 app.get('/hello',
 	function(req, res) {
-		
+
 		// obtain authorization header from incoming request
-		var authorization = 
+		var authorization =
 			oauthSDK.getAuthorizationHeaderFromIncomingRequest(req);
-		
+
 		res.send(200, authorization);
 	});
 ```
