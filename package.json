@@ -12,9 +12,11 @@
     "base64url": "0.0.6",
     "jws": "~0.2.2",
     "log4js": "^0.6.29",
-    "node-cache": "~1.0.0",
+    "node-cache": "~1.1.0",
     "q": "~1.0.1",
     "request": "~2.42.0",
+    "x509": "~0.1.4",
+    "ibmbluemix": "*",
     "underscore": "~1.6.0"
   },
   "devDependencies": {},
