@@ -15,22 +15,33 @@
  */
 
 var express = require('express');
-var oauthSDK = require('bms-mca-oauth-SDK');
+var oauthSDK = require('bms-mca-oauth-sdk');
 
 var app = express();
 
 process.env.imfServiceUrl = 'http://imf-authserver.stage1.ng.bluemix.net/imf-authserver';
 
-app.get('/v2/apps/:appid/hello', 
+app.get('/v2/apps/:appid/hello_secret',
 	function(req, res) {
 		
-		oauthSDK.getAuthorizationHeader({appId:req.params.appid}).then(function(authHeader) {
+		oauthSDK.getAuthorizationHeaderBySecret({appId:req.params.appid}).then(function(authHeader) {
 			res.send(200, authHeader);
 		}, function(err) {
 			console.log(err);
-			res.send(400,err);
+			res.send(500,err);
 	});
 });
+
+app.get('/v2/apps/:appid/hello_certificate',
+	function(req, res) {
+		oauthSDK.getAuthorizationHeaderByCertificate({appId:req.params.appid}).then(function(token) {
+			res.send(200, token);
+		}, function(err) {
+			res.send(500,err);
+		});
+	});
+
+
 
 app.listen(3000);
 
