@@ -1,6 +1,6 @@
 {
   "name": "bms-mca-oauth-sdk",
-  "version": "3.0.0",
+  "version": "3.0.3",
   "description": "The bms-mca-oauth-sdk module can be used to get the authorization header from the Mobile Client Access Service",
   "main": "./lib/index.js",
   "repository": {
