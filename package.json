@@ -10,13 +10,12 @@
   "license": "Apache-2.0",
   "dependencies": {
     "base64url": "0.0.6",
-    "jws": "~0.2.2",
+    "jws": "~3.0.0",
     "log4js": "^0.6.29",
     "node-cache": "~1.1.0",
     "q": "~1.0.1",
-    "request": "~2.42.0",
+    "request": "~2.81.0",
     "x509": "~0.2.4",
-    "ibmbluemix": "*",
     "underscore": "~1.6.0"
   },
   "devDependencies": {},
